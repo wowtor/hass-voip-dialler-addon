@@ -1,0 +1,31 @@
+name: SIP dialler
+version: 5
+slug: sip_dialler
+description: Dials SIP extensions and plays audio file
+arch:
+    - armhf
+    - armv7
+    - aarch64
+    - amd64
+    - i386
+startup: application
+boot: auto
+options:
+    sip_host:
+    sip_user:
+    sip_password:
+    call_extension:
+    play_file: /testfile.wav
+    call_time_secs: 30
+
+schema:
+    sip_host: str
+    sip_user: str
+    sip_password: str
+    call_extension: str
+    play_file: str
+    call_time_secs: int
+
+ports:
+    80/tcp: 8000
+    22/tcp: 8022
