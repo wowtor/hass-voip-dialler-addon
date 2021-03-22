@@ -1,4 +1,4 @@
-Home Assistant SIP Dialler Addon
+Home Assistant VOIP Dialler Addon
 ================================
 
 Addon for [Home Assistant](http://home-assistant.io) to dial a SIP
@@ -14,7 +14,8 @@ elsewhere, such as the
 Prerequisites
 =============
 
-A subscription to a VOIP service.
+A subscription to a VOIP service would certainly help putting this addon
+to good use.
 
 
 Setup
@@ -29,13 +30,13 @@ to add your public SSH key.
 
 Configure the addon. It requires the following parameters:
 
-- sip_host: a SIP server;
-- sip_user
-- sip_password
-- call_extension: an extension, generally a phone number
-- play_file: the WAV file to play fro mthe local filesystem; uploaded to the
+- `sip_host`: a SIP server;
+- `sip_user`
+- `sip_password`
+- `call_extension`: an extension, generally a phone number
+- `play_file`: the WAV file to play fro mthe local filesystem; uploaded to the
   container and must be 16kbit signed mono (single channel)
-- call_time_secs: the number of seconds of the call. The dialler will hangup after this many seconds after the call was initiated (including ring time and call time).
+- `call_time_secs`: the number of seconds of the call. The dialler will hangup after this many seconds after the call was initiated (including ring time and call time).
 
 Test if it works. Access `http://homeassistant.local:8000/call` in your
 browser. If the phone is ringing, it worked.
